@@ -43,28 +43,12 @@
 		  };
 		  map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 		  directionsDisplay1.setMap(map);
-		  directionsDisplay2.setMap(map);
-		  directionsDisplay3.setMap(map);
-		  directionsDisplay4.setMap(map);
-		  directionsDisplay5.setMap(map);
 		}
 
 		function calcRoute(start, end, routes) {
 		  switch (start) {
-		  	case "Innsbruck, Austria":
+		  	case "Parque Nacional da Peneda-Gerês, Portugal":
 		  		directionsDisplay1 = new google.maps.DirectionsRenderer(directionsDisplayOptions);
-		  		break;
-		  	case "Gozo, Malta":
-		  		directionsDisplay2 = new google.maps.DirectionsRenderer(directionsDisplayOptions);
-		  		break;
-		  	case "Krakow, Poland":
-		  		directionsDisplay3 = new google.maps.DirectionsRenderer(directionsDisplayOptions);
-		  		break;
-		  	case "Edinburgh, United Kingdom":
-		  		directionsDisplay4 = new google.maps.DirectionsRenderer(directionsDisplayOptions);
-		  		break;
-		  	case "Pamplona, Spain":
-		  		directionsDisplay5 = new google.maps.DirectionsRenderer(directionsDisplayOptions);
 		  		break;
 		  }
 		  
@@ -85,20 +69,8 @@
 		  directionsService.route(request, function(response, status) {
 			if (status == google.maps.DirectionsStatus.OK) {
 				switch (start) {
-					case "Innsbruck, Austria":
+					case "Parque Nacional da Peneda-Gerês, Portugal":
 						directionsDisplay1.setDirections(response);
-						break;
-					case "Gozo, Malta":
-						directionsDisplay2.setDirections(response);
-						break;
-					case "Krakow, Poland":
-						directionsDisplay3.setDirections(response);
-						break;
-					case "Edinburgh, United Kingdom":
-						directionsDisplay4.setDirections(response);
-						break;
-					case "Pamplona, Spain":
-						directionsDisplay5.setDirections(response);
 						break;
 				  }
 			}
@@ -107,16 +79,8 @@
 
 		google.maps.event.addDomListener(window, 'load', initialize);
 		
-		calcRoute("Innsbruck, Austria", "Gozo, Malta", ["Munich, Germany", "Pag, Croatia", "Venice, Italy", "Tuscany, Italy", "Florence, Italy", "Rome, Italy", "Vatican City", "Amalfi, Italy"]);
-
-		calcRoute("Gozo, Malta", "Krakow, Poland", ["Dubrovnik, Croatia", "Santorini, Thira, Greece", "Rila Monastery, Rilski manastir, Bulgaria", "Istanbul, Turkey", "Sighisoara, Mures County, Romania", "Budapest, Hungary", "Vienna, Austria", "Prague, Czech Republic"]);
-
-		calcRoute("Krakow, Poland", "Edinburgh, United Kingdom", ["Jägala, 74205 Harjumaa, Estonia", "Lapland, Finland", "ICEBAR, Marknadsvägen, Jukkasjärvi, Sweden", "Bergen, Norway", "Copenhagen, Denmark", "Berlin, Germany", "Amsterdam, Netherlands", "Keukenhof, Stationsweg, Lisse, Netherlands"]);
-
-		calcRoute("Edinburgh, United Kingdom", "Pamplona, Spain", ["Inverness, United Kingdom", "Ballybunion, Ireland", "Cliffs of Moher, Clare, Ireland", "Cornwall, England", "Stonehenge, Amesbury, United Kingdom", "London, United Kingdom", "Brussels, Belgium", "Paris, France"]);
-
-		calcRoute("Pamplona, Spain", "Innsbruck, Austria", ["Lagos, Portugal", "Granada, Spain", "Ibiza, Spain", "Barcelona, Spain", "Luberone, Bonnieux, France", "Nice, France", "Monte Carlo, Monaco", "Interlaken, Switzerland"]);
-    </script>
+		calcRoute("Parque Nacional da Peneda-Gerês, Portugal", "Parque Natural da Ria Formosa, Portugal", ["Parque Nacional da Peneda-Gerês, Portugal", "Parque Natural da Ria Formosa, Portugal"]);
+</script>
   </head>
   <body>
     <div id="map-canvas"></div>
