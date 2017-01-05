@@ -6,7 +6,7 @@
     <meta name="description" content="Randy Olson uses machine learning to find the optimal road trip across Europe.">
     <meta name="author" content="Randal S. Olson">
     
-    <title>An optimal road trip across Europe according to machine learning</title>
+    <title>An optimal road trip across Portugal National Parks according to machine learning</title>
     <style>
       html, body, #map-canvas {
         height: 100%;
@@ -26,9 +26,7 @@
     </style>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
     <script>
-		var directionsDisplay1, directionsDisplay2;
-		var directionsDisplay3, directionsDisplay4;
-		var directionsDisplay5;
+		var directionsDisplay1;
 		var markerOptions = {icon: "http://maps.gstatic.com/mapfiles/markers2/marker.png"};
 		var directionsDisplayOptions = {preserveViewport: true,
 										markerOptions: markerOptions};
@@ -79,7 +77,7 @@
 
 		google.maps.event.addDomListener(window, 'load', initialize);
 		
-		calcRoute("Parque Nacional da Peneda-Gerês, Portugal", "Parque Natural da Ria Formosa, Portugal", ["Parque Nacional da Peneda-Gerês, Portugal", "Parque Natural da Ria Formosa, Portugal"]);
+		calcRoute("Parque Nacional da Peneda-Gerês, Portugal", "Parque Natural da Ria Formosa, Portugal", ["Parque Nacional da Peneda-Gerês, Portugal", "Parque Natural do Alvão, Portugal", "Parque Natural de Montesinho, Portugal", "Parque Natural da Serra da Estrela, Portugal", "Parque Natural do Tejo Internacional, Portugal", "Parque Natural das Serras de Aire e Candeeiros, Portugal", "Parque Natural de Sintra-Cascais, Portugal", "Parque Natural da Arrábida, Portugal", "Parque Natural do Sudoeste Alentejano e Costa Vicentina, Portugal", "Parque Natural da Ria Formosa, Portugal"]);
 </script>
   </head>
   <body>
